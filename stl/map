@@ -1,0 +1,24 @@
+1. 变量声明
+map<string, string> mapStudent;
+2. 插入元素
+//用insert函數插入pair
+    mapStudent.insert(pair<string, string>("r000", "student_zero"));
+//用"array"方式插入
+    mapStudent["r123"] = "student_first";
+    mapStudent["r456"] = "student_second";
+3. 查找
+iter = mapStudent.find("r123");
+if(iter != mapStudent.end())
+       cout<<"Find, the value is"<<iter->second<<endl;
+else
+   cout<<"Do not Find"<<endl;
+4. 刪除与清空
+清空map中的数据可以用clear()，判定map中是否有数据可以用empty()，它返回true则说明是空map。
+//迭代器刪除
+iter = mapStudent.find("r123");
+mapStudent.erase(iter);
+//用关鍵字刪除
+int n = mapStudent.erase("r123");//如果刪除了會返回1，否則返回0
+//用迭代器刪除 : 把整個map清空
+mapStudent.erase(mapStudent.begin(), mapStudent.end());
+//等同於mapStudent.clear()
