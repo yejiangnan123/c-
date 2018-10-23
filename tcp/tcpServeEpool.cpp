@@ -1,4 +1,7 @@
 
+/*
+使用epool实现tcp服务器高并发
+*/
 class tcpServeEpool
 {
 private:
