@@ -32,11 +32,23 @@ using std::vector;
 
     TARGET_LINK_LIBRARIES(test pthread miniupnpc ${Boost_LIBRARIES})
 */
+/*
+    https://www.boost.org/doc/libs/1_59_0/doc/html/program_options/tutorial.html
+    https://github.com/yejiangnan123/c-/tree/master/boost
+      ./test --cpu=5 --listenPort=1234
 
+    yejn@ubuntu:/mnt/hgfs/work/p2p_tcp$ cat config.cfg 
+    cpu=5
+    listenPort=5555
+    listenNumber=20
+    connectIp=192.168.1.45
+    connectPort=6666
+    thread1Num=10
+    thread2Num=11
+    thread3Num=12
+*/
 class program
 {
-    //  https://www.boost.org/doc/libs/1_59_0/doc/html/program_options/tutorial.html
-    //  
 private:
 public:
     int main(int ac, char*av[])
